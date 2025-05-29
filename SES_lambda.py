@@ -8,9 +8,9 @@ from email.mime.multipart import MIMEMultipart
 s3 = boto3.client('s3')
 ses = boto3.client('ses')
 
-FROM_ADDRESS = "Service Accounts Desk UK <no-reply@sesmail.catenacloud.net>"
-TO_ADDRESS = "service-inbox@catenacloud.net"
-SOURCE_ARN = "arn:aws:ses:eu-north-1:850995576846:identity/sesmail.catenacloud.net"
+FROM_ADDRESS = "Mail Bot <no-reply@inbound.examplemail.net>"
+TO_ADDRESS = "support-team@companydemo.net"
+SOURCE_ARN = "arn:aws:ses:us-east-1:123456789012:identity/inbound.examplemail.net"
 
 def lambda_handler(event, context):
     print("Received event:", event)
